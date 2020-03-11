@@ -17,7 +17,7 @@ import java.util.zip.ZipInputStream;
 
 public class CreateFile {
 
-    private static final Path  javaHomeDir  = Path.of("C:\\");// Path.of(System.getenv("JAVA_HOME"));"C:\\Java\\jdk-13"
+    private static final Path  javaHomeDir  = Path.of(System.getenv("JAVA_HOME"));
     private static final Path  javaSRC      = Path.of("src.zip");
     private static final Path  testFile1    = Path.of("C:\\test1.txt");
     private static final Path  testFile2    = Path.of("C:\\test2.txt");

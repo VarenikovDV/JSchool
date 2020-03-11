@@ -12,7 +12,7 @@ public class Main {
         }
 	    catch (Exception e){
             p=  Path.of("test.txt");
-        }
+       }
 
         ParserClass parserClass = new ParserClass(p);
         //System.out.println("\n\nAllArrayWorlds  :"+parserClass.getAllArrayWorldsl().subList(1,20));
