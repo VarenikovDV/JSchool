@@ -146,7 +146,6 @@ public class TestLinkedList<T>  implements  Iterable<T> {
     public boolean addAll(Collection<? extends T> c){
         if(c==null) throw new NullPointerException();
         for(T t:c){
-            //System.out.println(t.getClass()+"  "+t);
             add(t);
         }
         return true;

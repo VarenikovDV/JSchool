@@ -16,6 +16,9 @@
     </option>
   </component>
   <component name="ProjectId" id="1YziSW44u0FaFZuOaic3AwIpybz" />
+  <component name="PropertiesComponent">
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
   <component name="RunDashboard">
     <option name="ruleStates">
       <list>
@@ -63,7 +66,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/hw/jschool/TestLinkedList.java</url>
-          <line>155</line>
+          <line>154</line>
           <option name="timeStamp" value="19" />
         </line-breakpoint>
       </breakpoints>
