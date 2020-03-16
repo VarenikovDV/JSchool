@@ -2,31 +2,20 @@ package hw.jschool;
 
 import java.util.*;
 
-public class ImpCountMap<K>implements CountMap<K> {
+public class ImpCountMap<K> implements CountMap<K> {
 /*********************************************************************************************************************/
-
-/*********************************************************************************************************************/
-    //private class Node<K,T> extends AbstractMap.SimpleEntry<K.T>(
-
-/*********************************************************************************************************************/
-    private HashMap<K,Integer> map= new HashMap<>();
-
-    ///AbstractMap.SimpleEntry<K,T> tr= new AbstractMap.SimpleEntry<K,T>(null,null).;
-    //tr.
-
-/*********************************************************************************************************************/
-/*********************************************************************************************************************/
+    private Map<K,Integer> map= new HashMap<>();
 /*********************************************************************************************************************/
     @Override
     public void add(K k) {
         // добавляет элемент в этот контейнер.
-        map.put(k,map.get(k)+1);
+        map.put(k,map.get(k)==null?1:map.get(k)+1);
     }
 /*********************************************************************************************************************/
     @Override
     public int getCount(K k) {
         //Возвращает количество добавлений данного элемента
-        return map.get(k);
+        return map.get(k)==null?0:map.get(k);
     }
 /*********************************************************************************************************************/
     @Override
@@ -42,7 +31,7 @@ public class ImpCountMap<K>implements CountMap<K> {
     }
 /*********************************************************************************************************************/
     @Override
-    public void addAll(Map<? extends K, ? extends Integer> m) {
+    public void addAll(Map<? extends K,Integer> m) {
         //Добавить все элементы из source в текущий контейнер, при совпадении ключей,     суммировать значения
         map.putAll(m);
     }
@@ -54,7 +43,7 @@ public class ImpCountMap<K>implements CountMap<K> {
     }
 /*********************************************************************************************************************/
     @Override
-    public void toMap(Map<? super K, ? super Integer> m) {
+    public void toMap(Map<? super K,Integer> m) {
         //Тот же самый контракт как и toMap(), только всю информацию записать в destination
         m.putAll(map);
     }
