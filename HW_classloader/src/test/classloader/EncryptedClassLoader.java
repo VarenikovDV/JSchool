@@ -2,11 +2,7 @@ package test.classloader;
 
 import java.io.File;
 import java.io.IOException;
-import java.net.MalformedURLException;
-import java.net.URL;
-import java.net.URLClassLoader;
 import java.nio.file.Files;
-import java.nio.file.Paths;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -30,7 +26,7 @@ public class EncryptedClassLoader extends ClassLoader {
             if(resolve ==true) resolveClass(clazz);
             return clazz;
         }
-        return super.loadClass(name, resolve);
+        return getParent().loadClass(name);
     }
 
     /******************************************************************************************************************/
